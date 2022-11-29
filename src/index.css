@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+}
+.App{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(91, 124, 186);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-weight: bold
+    
+}
+.weatherCard{
+    /*border: 2px solid rgb(67, 83, 114, 0.6);*/
+    padding: 1rem 2rem 2rem 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    max-width: 90%;
+    /*background-color: rgba(67,83,114,0.6);*/
+    margin: 0 1rem;
+    font-family: Monaco;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://p1.pxfuel.com/preview/625/912/914/natural-summer-sky-wallpaper-blue-sky-denmark.jpg");
+}
+.weatherCard-body > ul{
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 40px;
+    padding: 10px;
+    color: black;
+    font-family: Hoefler Text;
+    font-size: 20px;
+    
+}
+.button1{
+    border: none;
+    padding: 4px;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: rgb(91, 124, 186);
+    transition: 0.2s background;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Monaco;
+    float: right;
+}
+.button2{
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: rgb(91, 124, 186);
+    transition: 0.2s background;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Monaco;
+}
+
+.button:hover{
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+}
+.weatherCard-body > ul > li {
+    text-transform: capitalize;
+    text-align:left ;
+}
+.h1{
+    margin: 1rem;
+}
+.img{
+    animation: 8s infinite flotar;
+}
+@keyframes flotar{
+    0%{transform: translate(0,0);}
+    25%{transform: translate(0,-5px);}
+    75%{transform: translate(0,5px);}
+    100%{transform: translate(0,-0);}
+}
+.clima:first-letter{
+    
+    text-transform: uppercase;
+}
+input{
+    border-radius: 5px;
+    background-color: #def;
+    font-size: 16px;
+    padding: 4px;
+    border: 0;
+    width: 100%;
+    font-family: Monaco;
+}
+.name{
+    padding: 10px;
+}
+.p{
+    font-size: 28px;
+}
+
