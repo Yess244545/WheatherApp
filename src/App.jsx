@@ -28,7 +28,18 @@ function App() {
     const API_KEY="8ba416a33dc3da24b50e430b23a3608a"
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`
     axios.get(URL)
-    .then(res=>setWeather(res.data))
+    .then(res=>{
+      const tempKelvin=res.data.main.temp
+      const tempCelsius=(tempKelvin-273.15).toFixed(2)
+      const tempFahrenheit=((tempCelsius*9/5)+32).toFixed(2)
+      const newTemperature={
+        celsius:tempCelsius,
+        fahrenheit: tempFahrenheit
+
+      }
+      setTemperature(newTemperature)
+      setWeather(res.data)
+    })
     .catch(err=>alert("not found this place"))
   }
 
